@@ -1,3 +1,5 @@
+import tailwindcss from "@tailwindcss/vite";
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
 
@@ -15,5 +17,16 @@ export default defineNuxtConfig({
       viewport: 'width=device-width, initial-scale=1.0',
       title: 'True and the rainbow kingdom'
     }
+  },
+
+  css: [
+    '~/assets/css/main.css',
+    '~/assets/css/favicon.css'
+  ],
+
+  vite: {
+    plugins: [
+      tailwindcss()
+    ]
   }
 });
